@@ -1,11 +1,30 @@
+import { useState } from "react";
 import "./home.css"
 
-const Home = () => {
+const Home = ({ setInputValue }) => {
+
+
+    const [value, setValue] = useState("")
+
+    const handleClick = () => {
+        setInputValue(value)
+        setValue("")
+    }
+
     return (
         <>
-            <div className="firstDiv">
-                <input type="text" className="inputTag"  placeholder="Past The Link" />
-                <input type="button" value="Submit" className="subButton" />
+            <div>
+                <h1>URL Shortener</h1>
+                <input
+                    type="text"
+                    className="inputTag"
+                    placeholder="Past The Link"
+                    value={value}
+                    onChange={e => setValue(e.target.value)}
+                />
+                <input type="button" value="Submit" className="subButton"
+                    onClick={handleClick}
+                />
             </div>
         </>
     )

@@ -1,15 +1,16 @@
+import { useState } from 'react'
 import './App.css'
-// import Home from "./components/Home"
-
 import Result from './components/Result'
 import Home from './components/home'
 
 function App() {
 
+  const [inputValue, setInputValue] = useState("")
+
   return (
     <>
-      <Home/>
-      <Result />
+      <Home setInputValue={setInputValue} />
+      <Result inputValue={inputValue} />
     </>
   )
 }
