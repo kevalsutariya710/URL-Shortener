@@ -1,5 +1,4 @@
 import { useState } from "react";
-import "./home.css"
 
 const Home = ({ setInputValue }) => {
 
@@ -13,8 +12,9 @@ const Home = ({ setInputValue }) => {
 
     return (
         <>
-            <div>
-                <h1>URL Shortener</h1>
+            <div className="content-center">
+
+                <h1 className="flex justify-center items-center">URL Shortener</h1>
                 <input
                     type="text"
                     className="inputTag"

@@ -1,5 +1,4 @@
 import { useState } from 'react'
-import './App.css'
 import Result from './components/Result'
 import Home from './components/home'
 
