@@ -34,7 +34,6 @@ const Result = ({ inputValue }) => {
             </CopyToClipboard>
         </>
 
-
     )
 }
 
