@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-const Home = ({ setInputValue, setLoading }) => {
+const Home = ({ setInputValue, setLoad }) => {
 
 
     const [value, setValue] = useState("")
@@ -8,7 +8,7 @@ const Home = ({ setInputValue, setLoading }) => {
     const handleClick = () => {
         setInputValue(value)
         setValue("")
-        setLoading(false)
+        setLoad(false)
     }
 
     return (
@@ -21,7 +21,8 @@ const Home = ({ setInputValue, setLoading }) => {
                         type="text"
                         value={value}
                         onChange={e => setValue(e.target.value)}
-                        required />
+                        required
+                    />
                     <button type="submit" onClick={handleClick}>Short</button>
                 </div>
             </div>
