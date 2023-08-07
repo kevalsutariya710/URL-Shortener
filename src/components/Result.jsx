@@ -50,10 +50,10 @@ const Result = ({ inputValue }) => {
 
         toast.success('Copied', {
             position: "top-center",
-            autoClose: 3000,
-            hideProgressBar: false,
+            autoClose: 100,
+            hideProgressBar: true,
             closeOnClick: true,
-            pauseOnHover: true,
+            pauseOnHover: false,
             draggable: true,
             theme: "colored",
         });
@@ -68,8 +68,8 @@ const Result = ({ inputValue }) => {
                 <CopyToClipboard text={result}>
                     <button className="copied" onClick={Alert}>Copy</button>
                 </CopyToClipboard>
-                <ToastContainer />
             </div>
+            <ToastContainer />
         </>
 
     )
